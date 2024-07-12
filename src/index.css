@@ -317,3 +317,71 @@ a.hero-button{
   box-shadow: 0px 0px;
   transition: 200ms ease-in;
 }
+
+
+@media only screen and (max-width: 600px) {
+  header .image-container h1.hero-title {
+    font-size: 5rem;
+  }
+
+  header {
+    height: 600px;
+  }
+
+  header nav .logo {
+    display: none;
+  }
+
+  .socials,
+  .time {
+    display: none;
+  }
+
+  nav {
+    justify-content: space-around;
+  }
+
+  .how-title h2 {
+    font-size: 5rem;
+  }
+
+  .how-list h3 {
+    font-size: 1.2rem;
+  }
+  .how-list ul{
+    list-style: none;
+  }
+
+  .how-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .how-list p {
+    font-size: 1rem;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-title {
+    margin-top: 30px;
+    text-align: center;
+    align-self: center;
+  }
+
+  .about-cards {
+    display: flex;
+    flex-direction: column;
+  }
+}
