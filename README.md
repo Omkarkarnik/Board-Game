@@ -1,5 +1,3 @@
-# React + Vite
-
 # SUGAR & DICE BOARD GAME CAFE WEBSITE 📱📸
 # PROJECT OVERVIEW 🚀🚀🚀
 A website makeover for **[Sip n Play](https://www.sipnplaynyc.com/)** that features everything about their company needs.
