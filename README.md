@@ -17,7 +17,7 @@ Open terminal and type
 # SCREENSHOTS
 Landing Page - <img width="1430" alt="Screenshot_2024-07-12_at_11 29 47_AM" src="https://github.com/user-attachments/assets/d9a044d5-61ae-493f-b92e-fcf5866a94da">
 Events page - <img width="1440" alt="Screenshot_2024-07-12_at_11 30 11_AM" src="https://github.com/user-attachments/assets/6ff823f0-8da2-49eb-b800-e5f3766e1e47">
-3D Webpage - 
+3D Webpage - <img width="1438" alt="Screenshot_2024-07-12_at_11 30 26_AM" src="https://github.com/user-attachments/assets/0eac12be-019e-4737-a315-6144b5f468fc">
 
 
 # TECHNICAL STACK 🧱
