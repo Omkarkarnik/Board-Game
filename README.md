@@ -21,7 +21,7 @@ Events page - <img width="1440" alt="Screenshot_2024-07-12_at_11 30 11_AM" src="
 
 
 # TECHNICAL STACK 🧱
-- Languages: Javascipt, HTML/CSS
+- Languages: Javascipt, HTML/CSS, Vercel.
 - Libraries: Three Libraries, VITE.
 
 # WHAT'S NEXT?
