@@ -28,5 +28,4 @@ Events page - <img width="1440" alt="Screenshot_2024-07-12_at_11 30 11_AM" src="
 - We tried to build a 3D menu but couldn't finish it due to short period given for the hackathon. 
 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Contributors - Kelvin Ihezue, Abdurraouf Etagiuri, Omkar Karnik
