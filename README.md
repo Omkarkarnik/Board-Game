@@ -3,7 +3,7 @@
 This project is a board game cafe website makeover for **[Sip n Play](https://www.sipnplaynyc.com/)** that features everything about their company needs.
 
 # KEY FEATURES 🔑
-- An Events Schedule that displays the upcoming board game events
+- An events schedule that displays the upcoming board game events
 - A responsive landing page that compatible to all screen sizes, including mobile devices.
 
 # HOW TO RUN THE PROJECT
