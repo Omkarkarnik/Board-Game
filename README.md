@@ -1,6 +1,6 @@
 # SUGAR & DICE  ♟️🎲
 # PROJECT OVERVIEW 🚀🚀🚀
-This project is a board game website makeover for **[Sip n Play](https://www.sipnplaynyc.com/)** that features everything about their company needs.
+This project is a board game cafe website makeover for **[Sip n Play](https://www.sipnplaynyc.com/)** that features everything about their company needs.
 
 # KEY FEATURES 🔑
 - An Events Schedule that displays the upcoming board game events
