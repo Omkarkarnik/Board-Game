@@ -26,4 +26,5 @@ Events page - <img width="1440" alt="Screenshot_2024-07-12_at_11 30 11_AM" src="
 - We tried to build a 3D menu but couldn't finish it due to short period given for the hackathon. 
 
 
-Contributors - Kelvin Ihezue, Abdurraouf Etagiuri, Omkar Karnik
+# Contributors 
+- Kelvin Ihezue, Abdurraouf Etagiuri, Omkar Karnik
