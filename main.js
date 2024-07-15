@@ -25,34 +25,34 @@ canvasContainer.appendChild(renderer.domElement);
 // const controls = new OrbitControls(camera, renderer.domElement);
 // controls.enableDamping = true; 
 
-const modelPaths = [
-  './boba_tea_cup.glb', 
-  './bubble_tea_and_cookies.glb', 
-  './cafe_latte_with_art.glb',
-  './coffee_shop_cup.glb',,
-  './iced_coffee.glb'
+// const modelPaths = [
+//   './boba_tea_cup.glb', 
+//   './bubble_tea_and_cookies.glb', 
+//   './cafe_latte_with_art.glb',
+//   './coffee_shop_cup.glb',,
+//   './iced_coffee.glb'
 
-]; 
-const itemDescriptions = [
-"Description for Boba Tea",
-"Description for Bubble tea",
-"Description for cafe latte",
-"Description for coffee cup",
-"Description for iced coffee",
-]; 
+// ]; 
+// const itemDescriptions = [
+// "Description for Boba Tea",
+// "Description for Bubble tea",
+// "Description for cafe latte",
+// "Description for coffee cup",
+// "Description for iced coffee",
+// ]; 
 
 const loader = new GLTFLoader();
-let currentModelIndex = 0;
-const models = [];
+// let currentModelIndex = 0;
+// const models = [];
 
-modelPaths.forEach((path, index) => {
-  loader.load(path, (gltf) => {
-    const model = gltf.scene;
-    model.position.set(0, 0, 0);
-    model.scale.set(2, 2, 2); // Adjust scale as needed
-    models.push(model);
-    model.userData.index = index;
-  })});
+// modelPaths.forEach((path, index) => {
+//   loader.load(path, (gltf) => {
+//     const model = gltf.scene;
+//     model.position.set(0, 0, 0);
+//     model.scale.set(2, 2, 2); // Adjust scale as needed
+//     models.push(model);
+//     model.userData.index = index;
+//   })});
 let boba;
 
 loader.load(
@@ -74,28 +74,28 @@ loader.load(
         console.error(error);
     }
 );
-let bubbletea;
-loader.load(
-    './bubble_tea_cup.glb', 
-    async function (gltf) {
-        bubbletea = gltf.scene;
-        bubbletea.rotation.x = -Math.PI / 6;
+// let bubbletea;
+// loader.load(
+//     './bubble_tea_cup.glb', 
+//     async function (gltf) {
+//         bubbletea = gltf.scene;
+//         bubbletea.rotation.x = -Math.PI / 6;
        
   
-       await scene.add(bubbletea);
+//        await scene.add(bubbletea);
         
         
 
 
         
-    },
-    undefined,
-    function (error) {
-        console.error(error);
-    }
+//     },
+//     undefined,
+//     function (error) {
+//         console.error(error);
+//     }
 
   
-);
+// );
 
 // let currentModelIndex = 0;
 // const models = [];
