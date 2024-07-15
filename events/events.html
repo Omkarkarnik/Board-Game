@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sugar & Dice Events</title>
+    <link rel="stylesheet" href="./events.css">
+    <link rel="stylesheet" href="../evo-calendar.min.css">
+    <link rel="stylesheet" href="../evo-calendar.midnight-blue.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Description -->
+    <nav>
+          <div class="logo">
+              <h1>Board Game - Track 1</h1>
+          </div>
+          <ul>
+              <li class="home"><a href="../index.html">Home</a></li>
+              <li class="time"><a href="../index.html">Opening Times</a></li>
+              <li class="event"><a href="../events/events.html">Events</a></li>
+              <li class="menu"><a href="../three/three.html">Menu</a></li>
+              <li class="socials"><a href="../index.html">Socials</a></li>
+              <li class="book"><a href="../index.html">Book a Table</a></li>
+          </ul>
+      </nav>
+    <div class="hero">
+
+        <div id="calendar"></div>
+
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="scripts.js"></script>
+    <script src="../public/evo-calendar.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#calendar').evoCalendar({
+                theme: "Midnight Blue",
+                calendarEvents: [
+                    {
+                        id: 'event1', // Event's ID (required)
+                        name: "INDEPENDENCE DAY", // Event name (required)
+                        date: "July/4/2024", // Event date (required)
+                        description: "The Fourth of July, also known as Independence Day, is a federal holiday in the United States commemorating the adoption of the Declaration of Independence on July 4, 1776. ",
+                        type: "holiday", // Event type (required)
+                        everyYear: true // Same event every year (optional)
+                    },
+                    {
+                        name: "GAME WEEKEND",
+                        badge: "00", // Event badge (optional)
+                        date: ["July/12/2024", "July/14/2024"], // Date range
+                        description: "Experience the ultimate game night at Sugar & Dice with our Game Weekend Night! Join us every Fridays thru Sunday evenings for an exciting gathering of board game enthusiasts.", // Event description (optional)
+                        type: "event",
+                        color: "#63d867" // Event custom color (optional)
+                    },
+                    {
+                        id: 'event2', // Event's ID (required)
+                        name: "Trivia", // Event name (required)
+                        date: "July/8/2024", // Event date (required)
+                        description: "Challenge your knowledge and test your wits with our exciting Trivia games at Sugar & Dice. Join us for a thrilling session of Trivia where you can compete with friends and fellow enthusiasts. ",
+                        type: "holiday", // Event type (required)
+                        everyYear: true // Same event every year (optional)
+                    },
+                    {
+                        name: "GAME WEEKEND",
+                        badge: "00", // Event badge (optional)
+                        date: ["July/19/2024", "July/21/2024"], // Date range
+                        description: "Experience the ultimate game night at Sugar & Dice with our Game Weekend Night! Join us every Fridays thru Sunday evenings for an exciting gathering of board game enthusiasts. ", // Event description (optional)
+                        type: "event",
+                        color: "#63d867" // Event custom color (optional)
+                    },
+                    {
+                        id: 'event4', // Event's ID (required)
+                        name: "BLOOD ON THE CLOCKTOWER", // Event name (required)
+                        date: "July/4/2024", // Event date (required)
+                        description: "Dive into the mystery and deception of 'Blood on the Clocktower' at Sugar & Dice. Join us for an immersive social deduction experience where players must uncover the truth and deceive their opponents to survive. ",
+                        type: "holiday", // Event type (required)
+                        everyYear: true // Same event every year (optional)
+                    },
+                    {
+                        name: "GAME WEEKEND",
+                        badge: "00", // Event badge (optional)
+                        date: ["July/26/2024", "July/28/2024"], // Date range
+                        description: "Experience the ultimate game night at Sugar & Dice with our Game Weekend Night! Join us every Fridays thru Sunday evenings for an exciting gathering of board game enthusiasts. ", // Event description (optional)
+                        type: "event",
+                        color: "#63d867" // Event custom color (optional)
+                    },
+                    {
+                        id: 'event6', // Event's ID (required)
+                        name: "HEAVY GAME NIGHT", // Event name (required)
+                        date: "July/30/2024", // Event date (required)
+                        description: "Unleash your strategic prowess at Heavy Game Night, an exclusive event at Sugar & Dice. Join us for an evening dedicated to challenging and immersive gameplay experiences. ",
+                        type: "holiday", // Event type (required)
+                        everyYear: true // Same event every year (optional)
+                    },
+
+                ]
+            });
+        });
+    </script>
+    
+
+   
+</body>
+</html>
