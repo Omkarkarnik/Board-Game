@@ -1,29 +1,48 @@
-import './three.css'
-import * as THREE from "three";
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
+
+import * as THREE from "../node_modules/three";
+import { GLTFLoader } from '../node_modules/three/examples/jsm/loaders/GLTFLoader.js';
+import { OrbitControls } from '../node_modules/three/examples/jsm/controls/OrbitControls.js';
 
 let scene, camera, renderer, sun, earth, orbit;
 
 
-  
+
 
 
 scene = new THREE.Scene();
-camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.5, 1000);
 renderer =  new THREE.WebGLRenderer({antialias:true});
 
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setClearColor(new THREE.Color(0xffffff))
 document.body.appendChild(renderer.domElement);
 
+const light = new THREE.DirectionalLight(0xffffff, 1);
+
+light.position.set(10, 10, 10); // Adjust the position of the light
+light.castShadow = true;
+light.visible = true;
+light.intensity = 2;
+light.shadow.radius  = 10;
+
+
+light.shadow.mapSize.width = 1024; // Optional shadow map size
+light.shadow.mapSize.height = 1024; // Optional shadow map size
+light.shadow.camera.near = 0.5; // Optional near shadow camera distance
+light.shadow.camera.far = 50;
+scene.add(light);
 
 const canvasContainer = document.getElementById('canvas-container');
 renderer.setSize(canvasContainer.clientWidth, canvasContainer.clientHeight);
 canvasContainer.appendChild(renderer.domElement); 
 
-// const controls = new OrbitControls(camera, renderer.domElement);
-// controls.enableDamping = true; 
+
+
+
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true; 
 
 // const modelPaths = [
 //   './boba_tea_cup.glb', 
@@ -59,13 +78,26 @@ loader.load(
     './boba_tea_cup.glb', // Replace with the path to your Shiba model
     function (gltf) {
         boba = gltf.scene;
-        boba.rotation.x = -Math.PI / 6;
-        boba.rotation.set(1,0,0);
-        boba.position.set(0,0,0)
+        
+        boba.rotation.z = 0.7;
+        // boba.rotation.set(1,0,0);
+        boba.position.set(0,15,0);
+     
+        boba.traverse(function (node) {
+            if (node.isMesh) {
+                node.castShadow = true; // Enable shadows for the model
+                node.receiveShadow = true; // Enable shadows for the model
+
+            }
+        boba.castShadow = true;
+        });
         scene.add(boba);
         
-        
+        // // Set the camera position to be above and to the side of the object
+        // camera.position.set(objectPosition.x + 5, objectPosition.y + 5, objectPosition.z + 5);
 
+        // // Make the camera look at the object
+        // camera.lookAt(objectPosition);
 
         
     },
@@ -74,15 +106,34 @@ loader.load(
         console.error(error);
     }
 );
+
+
+
+
+
+const planeGeometry = new THREE.PlaneGeometry(500, 500);
+const planeMaterial = new THREE.MeshPhongMaterial({ color: 0xffffff});
+const plane = new THREE.Mesh(planeGeometry, planeMaterial);
+
+plane.position.set(0,0,0)
+plane.rotation.set(8,-10,10)
+
+
+
+plane.receiveShadow = true;
+plane.visible = true; // Enable shadows for the ground plane
+scene.add(plane);
+
 // let bubbletea;
 // loader.load(
 //     './bubble_tea_cup.glb', 
-//     async function (gltf) {
+//     function (gltf) {
 //         bubbletea = gltf.scene;
-//         bubbletea.rotation.x = -Math.PI / 6;
+//         // bubbletea.rotation.x = -Math.PI / 6;
+//         boba.rotation.y += 0.01;
        
   
-//        await scene.add(bubbletea);
+//         scene.add(bubbletea);
         
         
 
@@ -175,7 +226,12 @@ loader.load(
 // }
 
 // animate(); 
-camera.position.set(0,0,20);
+camera.position.set(0,18,50);
+
+
+// camera.rotation.z = -0.5
+
+
 
 
 
@@ -191,9 +247,9 @@ camera.position.set(0,0,20);
 // }
 
 function animate () {
-  requestAnimationFrame(animate);
-  boba.rotation.y += 0.01;
-  renderer.render(scene, camera);
+    requestAnimationFrame(animate);
+    boba.rotation.y += 0.01;
+    renderer.render(scene, camera);
 }
 
 animate();
