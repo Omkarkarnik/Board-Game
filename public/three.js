@@ -1,8 +1,8 @@
 
 
-import * as THREE from "./node_modules/three";
-import { GLTFLoader } from './node_modules/three/examples/jsm/loaders/GLTFLoader.js';
-import { OrbitControls } from './node_modules/three/examples/jsm/controls/OrbitControls.js';
+import * as THREE from "..three";
+import { GLTFLoader } from '..GLTFLoader';
+import { OrbitControls } from '..OrbitControls';
 
 let scene, camera, renderer, sun, earth, orbit;
 
